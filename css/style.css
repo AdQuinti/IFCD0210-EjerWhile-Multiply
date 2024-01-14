@@ -1,0 +1,45 @@
+/* titulo entrada */
+h1{
+    color:darkslateblue;
+    text-align: center;
+}
+
+/* mensajes error */
+h3,h4{
+    color:chocolate;
+    text-align: center;
+}
+
+/* linea separación */
+hr{
+    text-align: center;
+}
+
+/* tabla multiplicar */
+table{
+    position:relative;
+    left: 40%;
+}
+tr{
+    color:midnightblue;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: italic;
+}
+td{ /* titulo */
+    color:navy;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: italic;
+}
+#title{
+    font-style:italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+div{ /* para ampliación en archivos.js */
+    color:navy;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: italic;
+}
