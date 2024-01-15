@@ -14,15 +14,22 @@ export function check() {
         escribe("<hr><h3>Por favor recargue la página e intente de nuevo introducir 'ok' para acceder.</h3>");
     } else {
         console.log("Todo ok - continue");
-        let num = parseInt(solicita('Por favor, introduzca número entero.'));
+        let num = solicita('Por favor, introduzca número entero.');
+        console.log("Todo ok - continue ",num);
     // controla entero y entre 1 y 10
-        if (num > 0 && num < 11 && num === Math.floor(num)) { 
-            console.log(" Núm. correcto\ncreando tabla multi del " + num);
-            multiplica(num); // llamada funcion multiplicar
-            console.log("Creado con éxtio\nSayonara, baby!!!");
-        } else {
-            console.log("introdujo número negativo o mayor que 10");
-            escribe("<hr><h4>Lo siento, no es un número entero, o es cero, o mayor que diez<br>deberá recargar la página y comenzar de nuevo.</h4>");
-        }
+        if (num < 1) {
+            console.log("introdujo número negativo");
+            escribe("<hr><h4>Lo siento introdcujo un número negativo, o cero, o mayor que diez;<br>deberá recargar la página y comenzar de nuevo.</h4>");
+            } else if (num > 10){
+                console.log("introdujo número negativo o mayor que 10");
+                escribe("<hr><h4>Lo siento introdcujo un número negativo, o cero, o mayor que diez;<br>deberá recargar la página y comenzar de nuevo.</h4>");
+            }else if (num == Math.floor(num)) { 
+                console.log(" Núm. correcto\ncreando tabla multi del " + num);
+                multiplica(num); // llamada funcion multiplicar
+                console.log("Creado con éxtio\nSayonara, baby!!!");
+                } else {
+                    console.log("introdujo número con decimales");
+                    escribe("<hr><h4>Lo siento, no es un número entero,<br>deberá recargar la página y comenzar de nuevo.</h4>");
+        } 
     }
 }
